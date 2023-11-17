@@ -48,6 +48,15 @@
         };
     };
 
+    macros {
+        Pass_mcr: Pass_mcr {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp LS(P) &kp LS(O) &kp LS(L) &kp J &kp I &kp N9 &kp N8 &kp AMPS &kp U &kp K>;
+            label = "PASS_MCR";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -71,19 +80,19 @@
 
         left_layer {
             bindings = <
-&trans    &kp LBKT  &kp LBRC  &kp RBRC  &trans       &kp CARET  &kp LPAR   &kp RPAR   &kp RBKT  &kp TILDE
-&kp EXCL  &kp AT    &kp HASH  &kp DLLR  &kp PRCNT    &kp ASTRK  &kp MINUS  &kp EQUAL  &kp BSLH  &kp GRAVE
-&trans    &trans    &trans    &trans    &trans       &kp AMPS   &kp UNDER  &kp PLUS   &kp PIPE  &trans
-                              &trans    &trans       &trans     &trans
+&kp N1    &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5    &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0
+&kp EXCL  &kp AT        &kp HASH      &kp DLLR      &kp PRCNT       &kp ASTRK     &kp MINUS     &kp EQUAL     &kp BSLH      &kp GRAVE
+&trans    &trans        &trans        &trans        &trans          &kp AMPS      &kp UNDER     &kp PLUS      &kp PIPE      &trans
+                                      &trans        &trans          &trans        &trans
             >;
         };
 
         tri_layer {
             bindings = <
-&sys_reset   &trans  &trans  &trans      &bt BT_SEL 0    &trans  &trans  &trans  &trans  &sys_reset
-&bootloader  &trans  &trans  &trans      &bt BT_SEL 1    &trans  &trans  &trans  &trans  &bootloader
-&trans       &trans  &trans  &bt BT_CLR  &bt BT_SEL 2    &trans  &trans  &trans  &trans  &trans
-                             &trans      &trans          &trans  &trans
+&sys_reset   &trans  &trans  &trans      &bt BT_SEL 0    &Pass_mcr  &trans  &trans  &trans  &sys_reset
+&bootloader  &trans  &trans  &trans      &bt BT_SEL 1    &trans     &trans  &trans  &trans  &bootloader
+&trans       &trans  &trans  &bt BT_CLR  &bt BT_SEL 2    &trans     &trans  &trans  &trans  &trans
+                             &trans      &trans          &trans     &trans
             >;
         };
     };
