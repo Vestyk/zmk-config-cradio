@@ -133,7 +133,7 @@
             >;
         };
 
-        layer_4 {
+        tech_layer {
             bindings = <
 &trans  &trans  &trans  &trans     &trans            &trans      &trans         &trans  &trans  &trans
 &trans  &kp S   &kp D   &trans     &trans            &trans      &trans         &trans  &trans  &trans
