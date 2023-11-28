@@ -37,6 +37,11 @@
             bindings = <&mo 3>;
             key-positions = <33 30>;
         };
+
+        lvl_4 {
+            bindings = <&mo 4>;
+            key-positions = <17 18>;
+        };
     };
 
     behaviors {
@@ -53,7 +58,7 @@
             bindings = <&kp Q>, <&kp ESC>;
 
             #binding-cells = <0>;
-            mods = <(MOD_LCTL)>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
         morf_2: morf_2 {
@@ -62,7 +67,7 @@
             bindings = <&kp SPACE>, <&kp LEFT_GUI>;
 
             #binding-cells = <0>;
-            mods = <(MOD_LCTL)>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
         TD_X: TD_X {
@@ -94,37 +99,46 @@
 
         default_layer {
             bindings = <
-&morf_1  &kp W       &kp E        &kp R             &kp T      &kp Y      &kp U              &kp I      &kp O    &TD_X
-&kp A    &mt LALT S  &mt LCTRL D  &mt LEFT_SHIFT F  &kp G      &kp H      &mt RIGHT_SHIFT J  &kp K      &kp L    &TD_IE
-&kp Z    &kp X       &kp C        &kp V             &kp B      &kp N      &TD_b              &kp COMMA  &kp DOT  &kp FSLH
-                                  &lt 2 ENTER       &morf_2    &kp SPACE  &lt 1 BSPC
+&morf_1  &kp W       &kp E  &kp R             &kp T      &kp Y      &kp U              &kp I      &kp O    &TD_X
+&kp A    &mt LALT S  &kp D  &mt LEFT_SHIFT F  &kp G      &kp H      &mt RIGHT_SHIFT J  &kp K      &kp L    &TD_IE
+&kp Z    &kp X       &kp C  &kp V             &kp B      &kp N      &TD_b              &kp COMMA  &kp DOT  &kp FSLH
+                            &lt 2 ENTER       &morf_2    &kp SPACE  &lt 1 BSPC
             >;
         };
 
         right_layer {
             bindings = <
-&kp INS     &kp F1  &kp F2   &kp F3        &kp F4     &kp HOME        &kp PG_DN  &kp PG_UP       &kp END          &kp LG(DELETE)
-&kp DEL     &kp F5  &kp F6   &kp F7        &kp F8     &kp LEFT_ARROW  &kp UP     &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp SEMI
-&caps_word  &kp F9  &kp F10  &kp F11       &kp F12    &trans          &trans     &trans          &trans           &trans
-                             &kp LEFT_GUI  &kp ESC    &trans          &trans
+&kp INS     &kp F1  &kp F2   &kp F3        &kp F4     &kp PAGE_UP  &kp HOME        &kp UP          &kp END          &kp LG(DELETE)
+&kp DEL     &kp F5  &kp F6   &kp F7        &kp F8     &kp PG_DN    &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp RIGHT_SHIFT
+&caps_word  &kp F9  &kp F10  &kp F11       &kp F12    &trans       &trans          &trans          &trans           &trans
+                             &kp LEFT_GUI  &kp ESC    &trans       &trans
             >;
         };
 
         left_layer {
             bindings = <
-&kp N1          &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5    &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9          &kp NUMBER_0
-&kp EXCL        &kp AT        &kp HASH      &kp DLLR      &kp PRCNT       &kp COLON     &kp QUESTION  &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
-&kp LEFT_SHIFT  &trans        &trans        &kp PIPE      &kp MINUS       &kp PLUS      &kp EQUAL     &kp UNDER     &kp PIPE              &kp FSLH
-                                            &trans        &trans          &kp SPACE     &kp BSPC
+&kp N1          &kp NUMBER_2  &kp NUMBER_3    &kp NUMBER_4  &kp NUMBER_5      &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9          &kp NUMBER_0
+&kp EXCL        &kp AT        &kp HASH        &kp DLLR      &kp PRCNT         &kp COLON     &kp QUESTION  &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
+&kp LEFT_SHIFT  &caps_word    &kp LANGUAGE_1  &kp PIPE      &kp MINUS         &kp PLUS      &kp EQUAL     &kp UNDER     &kp PIPE              &kp FSLH
+                                              &trans        &kp LANGUAGE_2    &kp SPACE     &kp BSPC
             >;
         };
 
         tri_layer {
             bindings = <
-&sys_reset   &trans  &trans  &trans      &bt BT_SEL 0    &Pass_mcr  &trans  &trans  &trans  &sys_reset
-&bootloader  &trans  &trans  &trans      &bt BT_SEL 1    &trans     &trans  &trans  &trans  &bootloader
-&trans       &trans  &trans  &bt BT_CLR  &bt BT_SEL 2    &trans     &trans  &trans  &trans  &trans
-                             &trans      &trans          &trans     &trans
+&sys_reset   &trans  &trans  &trans      &bt BT_SEL 0    &Pass_mcr          &trans  &trans  &trans  &sys_reset
+&bootloader  &trans  &trans  &trans      &bt BT_SEL 1    &kp C_VOL_UP       &trans  &trans  &trans  &bootloader
+&trans       &trans  &trans  &bt BT_CLR  &bt BT_SEL 2    &kp C_VOLUME_DOWN  &trans  &trans  &trans  &trans
+                             &trans      &trans          &trans             &trans
+            >;
+        };
+
+        layer_4 {
+            bindings = <
+&trans  &trans  &trans  &trans     &trans            &trans      &trans         &trans  &trans  &trans
+&trans  &kp S   &kp D   &trans     &trans            &trans      &trans         &trans  &trans  &trans
+&kp Z   &kp X   &kp C   &kp V      &kp LGUI          &trans      &trans         &trans  &trans  &trans
+                        &kp LCTRL  &kp LEFT_SHIFT    &kp DELETE  &kp BACKSPACE
             >;
         };
     };
