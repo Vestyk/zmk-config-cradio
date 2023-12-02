@@ -35,7 +35,7 @@
 
         layer_3 {
             bindings = <&mo 3>;
-            key-positions = <33 30>;
+            key-positions = <30 31>;
         };
 
         lvl_4 {
