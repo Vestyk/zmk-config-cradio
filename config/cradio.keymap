@@ -118,6 +118,13 @@
             #binding-cells = <0>;
             bindings = <&kp Z>, <&none>, <&kp LC(Z)>;
         };
+
+        TD_QW: TD_QW {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_QW";
+            #binding-cells = <0>;
+            bindings = <&kp W>, <&kp Q>;
+        };
     };
 
     macros {
@@ -141,7 +148,7 @@
 
         default_layer {
             bindings = <
-&kp Q               &kp W        &kp E        &kp R             &kp T      &kp Y    &kp U              &kp I      &kp O    &TD_X
+&kp Q               &TD_QW       &kp E        &kp R             &kp T      &kp Y    &kp U              &kp I      &kp O    &TD_X
 &TD_A               &TD_S        &kp D        &mt LEFT_SHIFT F  &kp G      &kp H    &mt RIGHT_SHIFT J  &kp K      &kp L    &TD_IE
 &mt LEFT_CONTROL Z  &mt LC(X) X  &mt LC(C) C  &mt LC(V) V       &kp B      &kp N    &TD_b              &kp COMMA  &kp DOT  &kp FSLH
                                               &lt 2 ENTER       &morf_2    &morf_1  &lt 1 BSPC
@@ -159,9 +166,9 @@
 
         left_layer {
             bindings = <
-&kp N1          &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5      &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9          &kp NUMBER_0
-&kp EXCL        &kp AT        &kp HASH      &kp DLLR      &kp PRCNT         &kp COLON     &kp QUESTION  &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
-&kp LEFT_SHIFT  &caps_word    &kp ESCAPE    &kp PIPE      &kp MINUS         &kp PLUS      &kp EQUAL     &kp UNDER     &kp PIPE              &kp FSLH
+&kp N1          &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5      &kp NUMBER_6  &kp NUMBER_7   &kp NUMBER_8  &kp NUMBER_9          &kp NUMBER_0
+&kp EXCL        &kp AT        &kp HASH      &kp DLLR      &kp PRCNT         &kp CARET     &kp AMPERSAND  &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
+&kp LEFT_SHIFT  &caps_word    &kp ESCAPE    &kp PIPE      &kp MINUS         &kp PLUS      &kp EQUAL      &kp UNDER     &kp PIPE              &kp FSLH
                                             &trans        &kp LANGUAGE_2    &kp SPACE     &kp BSPC
             >;
         };
