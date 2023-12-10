@@ -42,6 +42,11 @@
             bindings = <&mo 4>;
             key-positions = <17 18>;
         };
+
+        lang_swap {
+            bindings = <&kp LG(SPACE)>;
+            key-positions = <23 22 21 20>;
+        };
     };
 
     behaviors {
@@ -155,10 +160,10 @@
 
         default_layer {
             bindings = <
-&kp Q               &kp W        &kp E        &kp R             &kp T      &kp Y    &kp U              &kp I      &kp O    &TD_X1
-&TD_A               &TD_S        &kp D        &mt LEFT_SHIFT F  &kp G      &kp H    &mt RIGHT_SHIFT J  &kp K      &kp L    &TD_IE
-&mt LEFT_CONTROL Z  &mt LC(X) X  &mt LC(C) C  &mt LC(V) V       &kp B      &kp N    &TD_b              &kp COMMA  &kp DOT  &kp FSLH
-                                              &lt 2 ENTER       &morf_2    &morf_1  &lt 1 BSPC
+&mt ESC Q       &kp W        &kp E        &kp R             &kp T              &kp Y               &kp U              &kp I      &kp O    &TD_X1
+&TD_A           &kp S        &kp D        &mt LEFT_SHIFT F  &kp G              &kp H               &mt RIGHT_SHIFT J  &kp K      &kp L    &TD_IE
+&mt LEFT_ALT Z  &mt LC(X) X  &mt LC(C) C  &mt LC(V) V       &kp B              &kp N               &TD_b              &kp COMMA  &kp DOT  &kp FSLH
+                                          &lt 2 ENTER       &mt LCTRL SPACE    &mt LEFT_GUI SPACE  &lt 1 BSPC
             >;
         };
 
@@ -182,19 +187,19 @@
 
         tri_layer {
             bindings = <
-&sys_reset   &trans  &trans  &trans      &bt BT_SEL 0    &Pass_mcr          &trans  &trans  &trans  &sys_reset
-&bootloader  &trans  &trans  &trans      &bt BT_SEL 1    &kp C_VOL_UP       &trans  &trans  &trans  &bootloader
-&trans       &trans  &trans  &bt BT_CLR  &bt BT_SEL 2    &kp C_VOLUME_DOWN  &trans  &trans  &trans  &trans
-                             &trans      &trans          &trans             &trans
+&sys_reset   &trans  &trans  &trans      &bt BT_SEL 0    &Pass_mcr          &kp LC(LA(DELETE))  &trans  &trans  &sys_reset
+&bootloader  &trans  &trans  &trans      &bt BT_SEL 1    &kp C_VOL_UP       &kp LG(LS(S))       &trans  &trans  &bootloader
+&trans       &trans  &trans  &bt BT_CLR  &bt BT_SEL 2    &kp C_VOLUME_DOWN  &kp K_CALCULATOR    &trans  &trans  &trans
+                             &trans      &trans          &kp C_SLEEP        &trans
             >;
         };
 
         tech_layer {
             bindings = <
-&trans  &trans  &trans  &trans     &trans            &trans        &trans         &trans  &trans  &trans
-&trans  &kp S   &kp D   &trans     &trans            &trans        &trans         &trans  &trans  &trans
-&kp Z   &kp X   &kp C   &kp V      &kp LGUI          &kp LEFT_ALT  &kp TAB        &trans  &trans  &trans
-                        &kp LCTRL  &kp LEFT_SHIFT    &kp DELETE    &kp BACKSPACE
+&kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LEFT_BRACE  &kp RIGHT_BRACE  &trans            &trans        &trans         &trans  &trans  &trans
+&trans            &kp S              &kp D           &trans           &trans            &trans        &trans         &trans  &trans  &trans
+&kp Z             &kp X              &kp LC(LS(C))   &kp LC(LS(V))    &kp LGUI          &kp LEFT_ALT  &kp TAB        &trans  &trans  &trans
+                                                     &kp LCTRL        &kp LEFT_SHIFT    &kp DELETE    &kp BACKSPACE
             >;
         };
     };
