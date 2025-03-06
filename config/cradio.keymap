@@ -54,7 +54,7 @@
         };
         comb_ctr_z {
             bindings = <&kp LC(Z)>;
-            key-positions = <24 23 22>;
+            key-positions = <22 23 24>;
         };
     };
 
@@ -66,23 +66,23 @@
             bindings = <&kp M>, <&kp RBKT>;
         };
 
-        morf_1: morf_1 {
-            compatible = "zmk,behavior-mod-morph";
-            label = "MORF_1";
-            bindings = <&kp SPACE>, <&kp ESC>;
+       // morf_1: morf_1 {
+        //    compatible = "zmk,behavior-mod-morph";
+        //    label = "MORF_1";
+         //   bindings = <&kp SPACE>, <&kp ESC>;
 
-            #binding-cells = <0>;
-            mods = <(MOD_RSFT)>;
-        };
+         //   #binding-cells = <0>;
+         //   mods = <(MOD_RSFT)>;
+       // };
 
-        morf_2: morf_2 {
-            compatible = "zmk,behavior-mod-morph";
-            label = "MORF_2";
-            bindings = <&kp SPACE>, <&kp LEFT_GUI>;
+      //  morf_2: morf_2 {
+      //      compatible = "zmk,behavior-mod-morph";
+      //      label = "MORF_2";
+      //      bindings = <&kp SPACE>, <&kp LEFT_GUI>;
 
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
+       //     #binding-cells = <0>;
+       //     mods = <(MOD_LSFT|MOD_RSFT)>;
+      //  };
 
         TD_X: TD_X {
             compatible = "zmk,behavior-tap-dance";
@@ -190,24 +190,24 @@
 &kp N1    &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5      &kp NUMBER_6  &kp NUMBER_7   &kp NUMBER_8  &kp NUMBER_9          &kp NUMBER_0
 &kp EXCL  &kp AT        &kp HASH      &kp DLLR      &kp PRCNT         &kp CARET     &kp AMPERSAND  &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
 &kp TAB   &caps_word    &kp ESCAPE    &kp PIPE      &kp MINUS         &kp PLUS      &kp EQUAL      &kp UNDER     &kp PIPE              &kp FSLH
-                                      &none        &kp LANGUAGE_2    &kp SPACE     &kp BSPC
+                                      &none        &none    &kp SPACE     &kp BSPC
             >;
         };
 
         tri_layer {
             bindings = <
-&sys_reset   &none  &none  &none      &bt BT_SEL 0    &Pass_mcr          &kp LC(LA(DELETE))  &C_AL_TASK_MANAGER  &none  &none
+&sys_reset   &none  &none  &none      &bt BT_SEL 0    &Pass_mcr          &kp LC(LA(DELETE))  &none  &none  &none
 &bootloader  &none  &none  &none      &bt BT_SEL 1    &kp C_VOL_UP       &kp LG(LS(S))       &none  &none  &none
-&none       &none  &none  &bt BT_CLR  &bt BT_SEL 2    &kp C_VOLUME_DOWN  &kp C_AL_CALCULATOR    &none  &none  &none
-                             &none      &none          &kp C_SLEEP        &none
+&none       &none  &none  &bt BT_CLR  &bt BT_SEL 2    &kp C_VOLUME_DOWN  &none    &none  &none  &none
+                             &none      &none          &м        &none
             >;
         };
 
         tech_layer {
             bindings = <
-&kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LEFT_BRACE  &kp RIGHT_BRACE  &trans            &trans        &trans         &trans  &trans  &trans
-&trans            &kp S              &kp D           &trans           &trans            &trans        &trans         &trans  &trans  &trans
-&kp Z             &kp X              &kp LC(LS(C))   &kp LC(LS(V))    &kp LGUI          &kp LEFT_ALT  &kp TAB        &trans  &trans  &trans
+&kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LEFT_BRACE  &kp RIGHT_BRACE  &none            &none        &none         &none  &none  &none
+&trans            &kp S              &kp D           &trans           &trans            &trans        &trans         &none  &none  &none
+&kp Z             &kp X              &kp LC(LS(C))   &kp LC(LS(V))    &kp LGUI          &kp LEFT_ALT  &kp TAB        &none  &none  &none
                                                      &kp LCTRL        &kp LEFT_SHIFT    &kp DELETE    &kp BACKSPACE
             >;
         };
