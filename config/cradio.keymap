@@ -5,11 +5,11 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 
-#define DEFAULT 0
-#define LEFT    1
-#define RIGHT   2
-#define TRI     3
-#define TECH    4
+#define default 0
+#define left    1
+#define right   2
+#define tri     3
+#define tech    4
 
 // Home row mods macro
 //#define HRML(k1,k2,k3,k4) &ht LSHFT k1  &ht LALT k2  &ht LCTRL k3  &ht LGUI k4
