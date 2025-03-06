@@ -170,7 +170,7 @@
             bindings = <
 &mt ESC Q  &kp W        &kp E        &kp R             &kp T              &kp Y               &kp U              &kp I      &kp O    &TD_X1
 &kp А      &kp S        &kp D        &mt LEFT_SHIFT F  &kp G              &kp H               &mt RIGHT_SHIFT J  &kp K      &kp L    &TD_IE
-&kp Z      &kp X  &kp C  &kp V       &kp B              &kp N               &TD_b              &kp COMMA  &kp DOT  &kp FSLH
+&kp Z      &kp X        &kp C        &kp V             &kp B              &kp N               &TD_b              &kp COMMA  &kp DOT  &kp FSLH
                                      &lt 2 ENTER       &mt LCTRL SPACE    &mt LEFT_GUI SPACE  &lt 1 BSPC
             >;
         };
