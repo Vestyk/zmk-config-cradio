@@ -98,26 +98,26 @@
             bindings = <&kp SEMI>, <&kp SQT>;
         };
 
-        TD_A: TD_A {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TD_A";
-            #binding-cells = <0>;
-            bindings = <&kp A>, <&none>, <&kp LC(A)>;
-        };
+       // TD_A: TD_A {
+        //    compatible = "zmk,behavior-tap-dance";
+        //    label = "TD_A";
+       //     #binding-cells = <0>;
+        //    bindings = <&kp A>, <&none>, <&kp LC(A)>;
+       // };
 
-        TD_S: TD_S {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TD_S";
-            #binding-cells = <0>;
-            bindings = <&kp S>, <&none>, <&kp LS(LEFT_ALT)>;
-        };
+       // TD_S: TD_S {
+       //     compatible = "zmk,behavior-tap-dance";
+       //     label = "TD_S";
+       //     #binding-cells = <0>;
+       //     bindings = <&kp S>, <&none>, <&kp LS(LEFT_ALT)>;
+       // };
 
-        TD_V: TD_V {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TD_V";
-            #binding-cells = <0>;
-            bindings = <&kp V>, <&none>, <&kp LC(V)>;
-        };
+       // TD_V: TD_V {
+       //     compatible = "zmk,behavior-tap-dance";
+       //     label = "TD_V";
+       //     #binding-cells = <0>;
+       //     bindings = <&kp V>, <&none>, <&kp LC(V)>;
+       // };
 
         TD_X1: TD_X1 {
             compatible = "zmk,behavior-tap-dance";
@@ -126,12 +126,11 @@
             bindings = <&kp P>, <&kp LEFT_BRACKET>;
         };
 
-        TD_Z: TD_Z {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TD_Z";
-            #binding-cells = <0>;
-            bindings = <&kp Z>, <&none>, <&kp LC(Z)>;
-        };
+       // TD_Z: TD_Z {
+       //     compatible = "zmk,behavior-tap-dance";
+       //     #binding-cells = <0>;
+       //     bindings = <&kp Z>, <&none>, <&kp LC(Z)>;
+       // };
 
         TD_QW: TD_QW {
             compatible = "zmk,behavior-tap-dance";
