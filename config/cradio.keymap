@@ -58,7 +58,7 @@ comb_ctr_z {
         };
     };
  comb_pass {
-            bindings = <&Pass_mcr>;
+            bindings = <&kp LS(P) &kp LS(O) &kp LS(L) &kp J &kp I &kp N9 &kp N8 &kp AMPS &kp U &kp K>;
             key-positions = <01 02 03>;
         };
     behaviors {
