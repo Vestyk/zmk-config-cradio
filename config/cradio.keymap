@@ -45,19 +45,22 @@
 
         lang_swap {
             bindings = <&kp LG(SPACE)>;
-            key-positions = <23 24>;
+            key-positions = <22 23>;
         };
 
  alt_enter {
             bindings = <&kp LA(ENTER)>;
             key-positions = <21 22 23>;
         };
-        comb_ctr_z {
+comb_ctr_z {
             bindings = <&kp LC(Z)>;
             key-positions = <22 23 24>;
         };
     };
-
+ comb_pass {
+            bindings = <&Pass_mcr>;
+            key-positions = <01 02 03>;
+        };
     behaviors {
         TD_b: TD_b {
             compatible = "zmk,behavior-tap-dance";
